@@ -16,7 +16,9 @@ var colGapAt = 5;
 //cols.splice(colGapAt, 0, "GAP");
 var Col = ({rightGap, bottomGap, type, onSelectSeat, row, col}) => {
   const selectSeat = () => {
-    onSelectSeat(row, col)
+    if(type != "reserved"){
+      onSelectSeat(row, col)
+    }
   }
   var margin = "12px 15px";
   var marginBottom = "12px";
